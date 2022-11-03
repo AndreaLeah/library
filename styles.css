@@ -1,0 +1,119 @@
+body,html {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-size: 32px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    font-size: 32px;
+}
+
+.add-book-popup {
+    background-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    height: 525px;
+    width: 300px;
+    padding: 0 10px 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+input, input::placeholder {
+    font-size: .8rem;
+    border-radius: 5px;
+    border-style: none;
+    line-height: 1.5;
+}
+
+/* Bookshelf */
+
+#bookshelf {
+    margin: 50px 100px;
+    display: flex;
+    gap: 50px;
+}
+
+/* bookDiv */
+
+.bookDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+
+.title-span {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.bookDiv>button {
+    font-size: 24px;
+}
+
+/* Pop-Up Form */
+
+.form-container {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  z-index: 2;
+}
+
+.checkbox-container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+#checkbox {
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    position: absolute;
+}
+
+#overlay {
+position: fixed; /* Sit on top of the page content */
+  visibility: hidden; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(65, 65, 65, 0.5); /* Black background with opacity */
+  z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.read {
+    background-color: rgb(206, 255, 132);
+}
+
+.not-read {
+    background-color: rgb(255, 127, 127);
+}
