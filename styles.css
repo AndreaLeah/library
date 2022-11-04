@@ -255,7 +255,11 @@ position: fixed;
 div.footer-text>p {
     margin: 0;
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    width: 100%;
+    background-color: #f7f7f7;
+    vertical-align: center;
 }
 
 .github-img {
@@ -274,6 +278,10 @@ a:hover {
 
 
 @media only screen and (max-width: 1500px) {
+
+    body {
+        padding-bottom: 250px;
+    }
     
     .add-book-popup {
         height: 345px;
@@ -283,6 +291,10 @@ a:hover {
         flex-direction: column;
         text-align: center;
         gap: 10px;
+    }
+
+    .btn-div>button {
+        color: black;
     }
 
     .form-inputs {
