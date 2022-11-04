@@ -8,10 +8,18 @@ If you need to change the book's read status, click the "Read"/"Not Read" button
 
 Your library is saved to your local storage, so you can leave and come back to it.   
 
-<br />
-
 [Live Demo](https://andrealeah.github.io/library/)  
+![Project GIPHY](https://media.giphy.com/media/uJadEYKEAyJ2zB0m90/giphy.gif)  
 
+![Mobile UI](images/mobileUI.jpg)
+![Mobile UI](images/mobileUI_2.jpg)
+![Mobile UI](images/mobileUI_3.jpg)
+![Mobile UI](images/ipadUI.jpg)  
+
+
+
+
+<br />
 
 **Attribution:**  
 GitHub Icon created by Pixel Perfect - Flaticon, [source](https://www.flaticon.com/free-icons/github)
