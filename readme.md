@@ -11,10 +11,10 @@ Your library is saved to your local storage, so you can leave and come back to i
 [Live Demo](https://andrealeah.github.io/library/)  
 ![Project GIPHY](https://media.giphy.com/media/uJadEYKEAyJ2zB0m90/giphy.gif)  
 
-![<img src="images/mobileUI.jpg" width="200" height="auto" />](images/mobileUI.jpg)
-![<img src="images/mobileUI_2.jpg" width="200" height="auto" />](images/mobileUI_2.jpg)
-![<img src="images/mobileUI_3.jpg" width="200" height="auto" />](images/mobileUI_3.jpg)
-![<img src="images/ipadUI.jpg" width="200" height="auto" />](images/ipadUI.jpg)  
+<img src="images/mobileUI.jpg" width="200" height="auto" />
+<img src="images/mobileUI_2.jpg" width="200" height="auto" />
+<img src="images/mobileUI_3.jpg" width="200" height="auto" />
+<img src="images/ipadUI.jpg" width="200" height="auto" /> 
 
 
 
