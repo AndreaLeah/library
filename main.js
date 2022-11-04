@@ -78,7 +78,7 @@ function displayBooksOnBookshelf (myLibrary) {
     // Remove Btn
     removeBtn = document.createElement('button');
     removeBtn.classList.add('remove-btn');
-    removeBtn.innerText = "Delete";
+    removeBtn.innerText = "Remove";
     removeBtn.addEventListener('click', deleteDiv);
 
     // Add Index of Book to Delete Btn (Added to delete Btn cause I'm lazy, erm smart ;) That's the target)
