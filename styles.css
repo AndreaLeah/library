@@ -1,31 +1,33 @@
 body,html {
     font-family: 'Poppins', sans-serif;
+    background-color: #f7f7f7;
     height: 100%;
     width: 100%;
     margin: 0;
     font-size: 32px;
-    background-color: #f7f7f7;
     --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
+/* Main Container Div */
+
 .main-container {
-    width: 100%;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 50px;
     margin-bottom: 50px;
+    width: 100%;
 }
 
 .navbar {
     background-color: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
     height: 70px;
+    width: 100%;
 }
 
 .navbar-content {
@@ -52,6 +54,112 @@ body,html {
     background-color: #acf4ff;
 }
 
+
+/* BookShelf */
+
+#bookshelf {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+    /* bookDiv */
+
+p {
+    margin: 0;
+}
+
+.bookDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    height: 300px;
+    width: 280px;
+    justify-content: space-between;
+    background-color: #ececec;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px 1px 4px;
+    padding: 15px 20px 20px;
+}
+
+.bookDiv>p:nth-child(1) {
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+.title-span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.btn-div {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-div>button {
+    font-size: 24px;
+}
+
+.remove-btn {
+    border-radius: 5px;
+    background-color: #f9ffff;
+    -webkit-filter: brightness(100%);
+}
+
+.remove-btn, .read-btn {
+    width: 100%;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-filter: brightness(100%);
+}
+
+.read {
+    background-color: rgb(221, 255, 170);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.not-read {
+    background-color: rgb(255, 216, 216);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover, .read-btn:hover {
+    -webkit-filter: brightness(98%);
+}
+
+
+/* Form Container */
+
+.form-container {
+    visibility: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    z-index: 2;
+}
+
 .add-book-popup {
     background-color: #f7f7f7;
     border-radius: 10px;
@@ -62,6 +170,39 @@ body,html {
     flex-direction: column;
     text-align: center;
     gap: 10px;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
+
+#author {
+    margin: 10px 0;
+}
+
+input, input::placeholder {
+    font-size: .8rem;
+    border-radius: 5px;
+    border-style: none;
+    line-height: 1.5;
+}
+
+.checkbox-container {
+    font-size: 22px;
+}
+
+.checkbox-container input {
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+#checkbox {
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
 }
 
 #new-book-submit-btn {
@@ -83,103 +224,7 @@ body,html {
 }
 
 
-input {
-    font-family: 'Poppins', sans-serif;
-    padding-left: 10px;
-}
-
-#author {
-    margin: 10px 0;
-}
-
-
-.checkbox-container {
-    font-size: 22px;
-}
-
-
-input, input::placeholder {
-    font-size: .8rem;
-    border-radius: 5px;
-    border-style: none;
-    line-height: 1.5;
-}
-
-/* Bookshelf */
-
-#bookshelf {
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    width: 80%;
-    margin: 0 auto;
-    justify-content: center;
-    flex-wrap: wrap;
-
-}
-
-/* bookDiv */
-
-p {
-    margin: 0;
-}
-
-.bookDiv {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    font-size: 24px;
-    height: 300px;
-    width: 280px;
-    justify-content: space-between;
-    background-color: #ececec;
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px 1px 4px;
-    padding: 15px 20px 20px;
-}
-
-.title-span {
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.btn-div {
-    flex-shrink: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.btn-div>button {
-    font-size: 24px;
-}
-
-/* Pop-Up Form */
-
-.form-container {
-    visibility: hidden;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
-    z-index: 2;
-}
-
-.checkbox-container input {
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-#checkbox {
-    height: 15px;
-    width: 15px;
-    background-color: #eee;
-}
+/* Overlay */
 
 #overlay {
 position: fixed; 
@@ -194,46 +239,6 @@ position: fixed;
   cursor: pointer; 
 }
 
-.read {
-    background-color: rgb(221, 255, 170);
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.not-read {
-    background-color: rgb(255, 216, 216);
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.remove-btn {
-    border-radius: 5px;
-    background-color: #f9ffff;
-    -webkit-filter: brightness(100%);
-}
-
-.remove-btn:hover, .read-btn:hover {
-    -webkit-filter: brightness(98%);
-}
-
-.read-btn, .remove-btn {
-    width: 100%;
-    border: none;
-    height: 40px;
-    cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    -webkit-filter: brightness(100%);
-}
-
-.bookDiv>p:nth-child(1) {
-    background-color: #ffffff;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    text-align: center;
-    padding: 5px 10px;
-}
 
 /* Footer */
 
@@ -247,7 +252,7 @@ position: fixed;
 
 div.footer-text>p {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     padding-bottom: 20px;
 }
 
