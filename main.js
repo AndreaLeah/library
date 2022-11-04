@@ -60,15 +60,20 @@ function displayBooksOnBookshelf (myLibrary) {
     let bookDiv = document.createElement('div');
     bookDiv.classList.add('bookDiv');
 
+
     // Book Name, Author, and Pages Text Nodes
-    let titleSpan = document.createElement('span');
+    let titleSpan = document.createElement('p');
     titleSpan.innerText = book.name;
     titleSpan.classList.add('title-span')
-    let authorSpan = document.createElement('span');
-    authorSpan.innerText = book.author; 
-    let pagesSpan = document.createElement('span');
-    pagesSpan.innerText = book.pages; 
+
   
+    let authorSpan = document.createElement('p');
+    authorSpan.innerText = book.author; 
+    let pagesSpan = document.createElement('p');
+    pagesSpan.innerText = book.pages; 
+    
+    let btnDiv = document.createElement('div');
+    btnDiv.classList.add('btn-div');
 
     // Remove Btn
     removeBtn = document.createElement('button');
@@ -82,27 +87,35 @@ function displayBooksOnBookshelf (myLibrary) {
 
     // Read Status
     let readStatusBtn = document.createElement('button');
+    readStatusBtn.classList.add('read-btn');
+
+    btnDiv.appendChild(readStatusBtn);
+    btnDiv.appendChild(removeBtn);
 
     // Default State is Not Read
     readStatusBtn.classList.add('not-read');
     readStatusBtn.innerText = "Not Read";
     readStatusBtn.addEventListener('click', function (e) {
 
-      if (readStatusBtn.classList[0] === 'not-read') {
+      if (readStatusBtn.classList.contains('not-read')) {
         readStatusBtn.classList.remove('not-read');
         readStatusBtn.classList.add('read');
         readStatusBtn.innerText = 'Read';
 
+        console.log(e);
+
         // Update Read Status In Array
-        myLibrary[e.target.parentNode.id].read = true;
+        myLibrary[e.target.parentNode.parentNode.id].read = true;
 
       } else {
         readStatusBtn.classList.remove('read');
         readStatusBtn.classList.add('not-read');
         readStatusBtn.innerText = 'Not Read';
-        // Update Read Status In Array
 
-        myLibrary[e.target.parentNode.id].read = false;
+        console.log(e);
+
+        // Update Read Status In Array
+        myLibrary[e.target.parentNode.parentNode.id].read = false;
         
       }
 
@@ -125,12 +138,14 @@ function displayBooksOnBookshelf (myLibrary) {
       readStatusBtn.classList.toggle
     });
 
+    pagesSpan.innerText += " pages";
+
     // Append p tags to bookDiv
     bookDiv.appendChild(titleSpan);
     bookDiv.appendChild(authorSpan);
     bookDiv.appendChild(pagesSpan);
-    bookDiv.appendChild(readStatusBtn);
-    bookDiv.appendChild(removeBtn);
+  
+    bookDiv.appendChild(btnDiv);
 
     // Append bookDiv to bookshelf
     bookshelf.appendChild(bookDiv);
@@ -149,14 +164,14 @@ function hideOverlay () {
 };
 
 function deleteDiv (e) {
-  let indexOfBook = e.target.parentNode.id;
+  let indexOfBook = e.target.parentNode.parentNode.id;
   myLibrary.splice(indexOfBook, 1);
 
   // Delete Local Storage Library
   localStorage.removeItem('library');
 
   // e.target.parentNode
-  bookshelf.removeChild(e.target.parentNode);
+  bookshelf.removeChild(e.target.parentNode.parentNode);
 
   if (myLibrary.length === 0) {
     return

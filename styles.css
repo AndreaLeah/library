@@ -4,6 +4,8 @@ body,html {
     width: 100%;
     margin: 0;
     font-size: 32px;
+    background-color: #f7f7f7;
+    --shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .main-container {
@@ -11,29 +13,90 @@ body,html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
+    margin-bottom: 50px;
 }
 
 .navbar {
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: 70px;
 }
 
-button {
+.navbar-content {
+    width: 80%;
+}
+
+.navbar-title {
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.add-new-book-btn {
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    height: 50px;
+    width: 200px;
+    border-radius: 10px;
     font-size: 32px;
 }
 
+.add-new-book-btn:hover {
+    background-color: #acf4ff;
+}
+
 .add-book-popup {
-    background-color: rgb(209, 209, 209);
+    background-color: #f7f7f7;
     border-radius: 10px;
-    height: 525px;
+    height: 325px;
     width: 300px;
-    padding: 0 10px 20px;
+    padding: 20px 15px 15px;
     display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 10px;
 }
+
+#new-book-submit-btn {
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    background-color: #5aecff;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 40px;
+    font-size: 24px;
+}
+
+#new-book-submit-btn:hover {
+    background-color: #1fe5ff;
+}
+
+
+input {
+    font-family: 'Poppins', sans-serif;
+    padding-left: 10px;
+}
+
+#author {
+    margin: 10px 0;
+}
+
+
+.checkbox-container {
+    font-size: 22px;
+}
+
 
 input, input::placeholder {
     font-size: .8rem;
@@ -45,28 +108,51 @@ input, input::placeholder {
 /* Bookshelf */
 
 #bookshelf {
-    margin: 50px 100px;
     display: flex;
+    flex-direction: row;
     gap: 50px;
+    width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 /* bookDiv */
 
+p {
+    margin: 0;
+}
+
 .bookDiv {
     display: flex;
     flex-direction: column;
-    gap: 20px;
     align-items: center;
     text-align: center;
     font-size: 24px;
+    height: 300px;
+    width: 280px;
+    justify-content: space-between;
+    background-color: #ececec;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px 1px 4px;
+    padding: 15px 20px 20px;
 }
 
 .title-span {
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.bookDiv>button {
+.btn-div {
+    flex-shrink: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn-div>button {
     font-size: 24px;
 }
 
@@ -78,8 +164,8 @@ input, input::placeholder {
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);
-  z-index: 2;
+    -ms-transform: translate(-50%,-50%);
+    z-index: 2;
 }
 
 .checkbox-container input {
@@ -93,7 +179,6 @@ input, input::placeholder {
     height: 15px;
     width: 15px;
     background-color: #eee;
-    position: absolute;
 }
 
 #overlay {
@@ -105,15 +190,48 @@ position: fixed; /* Sit on top of the page content */
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(65, 65, 65, 0.5); /* Black background with opacity */
+  background-color: rgba(135, 135, 135, 0.5); /* Black background with opacity */
   z-index: 1; /* Specify a stack order in case you're using a different order for other elements */
   cursor: pointer; /* Add a pointer on hover */
 }
 
 .read {
-    background-color: rgb(206, 255, 132);
+    background-color: rgb(221, 255, 170);
+    cursor: pointer;
+    border-radius: 5px;
 }
 
 .not-read {
-    background-color: rgb(255, 127, 127);
+    background-color: rgb(255, 216, 216);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn {
+    border-radius: 5px;
+    background-color: #f9ffff;
+    -webkit-filter: brightness(100%);
+}
+
+.remove-btn:hover, .read-btn:hover {
+    -webkit-filter: brightness(98%);
+}
+
+.read-btn, .remove-btn {
+    width: 100%;
+    border: none;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    -webkit-filter: brightness(100%);
+}
+
+.bookDiv>p:nth-child(1) {
+    background-color: #ffffff;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding: 5px 10px;
 }

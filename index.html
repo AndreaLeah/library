@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css"></link>
+    
     <!-- Google Fonts (Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,8 +16,9 @@
     <div class="main-container">
 
         <div class="navbar">
-            <h1>Library</h1>
-           
+            <div class="navbar-content">
+            <span class="navbar-title">Library</span>
+            </div>
         </div>
 
         <div class="body-content">
@@ -36,13 +38,15 @@
 
         <div class="add-book-popup">
 
-            <h3>Add New Book</h3>
+            <span>Add New Book</span>
 
         <form id="my-form">
-
+            
+            <div class="form-inputs">
             <input 
             type="text" 
             placeholder="Title" 
+            maxlength="25"
             id="title" 
             autocomplete="off" 
             required />
@@ -61,11 +65,13 @@
             autocomplete="off" 
             required />
 
-            <div>
+            </div>
+
+            <div class="read-it">
             <label class="checkbox-container">Have you read it?
             </label>
+            
             <input type="checkbox" id="checkbox" />
-        
             </div>
             
             <button 
