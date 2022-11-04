@@ -40,6 +40,7 @@ body,html {
 }
 
 .add-new-book-btn {
+    color: #64b1ff;
     background-color: transparent;
     border: none;
     font-weight: bold;
@@ -186,6 +187,7 @@ input, input::placeholder {
     border-radius: 5px;
     border-style: none;
     line-height: 1.5;
+    width: 95%;
 }
 
 .checkbox-container {
@@ -206,7 +208,6 @@ input, input::placeholder {
 }
 
 #new-book-submit-btn {
-    width: 90%;
     border: none;
     border-radius: 5px;
     background-color: #5aecff;
@@ -217,6 +218,7 @@ input, input::placeholder {
     font-weight: bold;
     height: 40px;
     font-size: 24px;
+    width: 100%;
 }
 
 #new-book-submit-btn:hover {
@@ -268,4 +270,25 @@ a {
 
 a:hover {
     color:#5aecff;
+}
+
+
+@media only screen and (max-width: 1500px) {
+    
+    .add-book-popup {
+        height: 345px;
+        width: 300px;
+        padding: 10px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .form-inputs {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
 }
