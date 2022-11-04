@@ -25,5 +25,5 @@ Your library is saved to your local storage, so you can leave and come back to i
 <br />
 
 **Attribution:**  
-GitHub Icon created by Pixel Perfect - Flaticon, [source](https://www.flaticon.com/free-icons/github)
+GitHub Icon created by Pixel Perfect - Flaticon, [source](https://www.flaticon.com/free-icons/github)  
 Favicon created by Freepik, [source](https://www.flaticon.com/free-icons/book)
